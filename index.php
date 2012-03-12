@@ -45,7 +45,7 @@
 	
 	<form class="well form-horizontal" id="price" action="./" method="post">
 		<div class="row">
-			<div id="time"><a href="#"><i class="icon-time"></i> Menu du soir</a></div>
+			<!--<div id="time"><a href="#"><i class="icon-time"></i> Menu du soir</a></div>-->
 			<fieldset class="span4">
 				<div class="control-group">
 					<label class="control-label" for="select01">Je suis</label>
