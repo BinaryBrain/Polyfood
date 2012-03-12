@@ -1,0 +1,57 @@
+.container {
+	padding-top: 30px;
+}
+.icon-chevron-down, .icon-chevron-up {
+	display: none;
+	float: right;
+}
+.headerSortDown .icon-chevron-down {
+	display: block;
+}
+.headerSortUp .icon-chevron-up {
+	display: block;
+}
+.header:hover {
+	background-color: #F5F5F5;
+}
+
+.table td, .table th {
+	background-color: #FFFFFF;
+}
+body {
+	min-height: 100%;
+	position: relative;
+}
+
+img {
+	width: 60px;
+}
+
+th.type {
+	width: 60px;
+}
+
+td.clickable:hover, th.clickable:hover {
+	cursor: pointer;
+	background-color: #eeeeee !important;
+}
+
+#time {
+	background-color: #F0F0F0;
+	border: 1px solid #E0E0E0;
+	border-radius: 5px 5px 5px 5px;
+	float: right;
+	padding: 5px 10px;
+}
+
+/*
+#line {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	margin-left: 10%;
+	width: 1px;
+	border-right: 3px solid #DD0000;
+	z-index: -10;
+}
+*/

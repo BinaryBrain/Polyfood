@@ -114,7 +114,7 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 					html += "<strong>"+json[i].restaurant.nom+"</strong>";
 				html += "</td>";
 				html += "<td>";
-					html += '<img src="images/'+json[i].logo+'.png" title="'+json[i].logo+'">';
+					html += '<img src="img/types/'+json[i].logo+'.png" title="'+json[i].logo+'">';
 				html += "</td>";
 				html += "<td>";
 					html += json[i].description;
