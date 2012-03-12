@@ -33,8 +33,46 @@
 </head>
 <body>
 
-<!--<div id="line"></div>-->
-			
+<!-- Facebook -->
+<!-- Initialisation SDK PHP -->
+<?php
+  require_once("facebook.php");
+
+  $config = array();
+  $config[‘appId’] = '312224588840695';
+  $config[‘secret’] = 'a74c0c4125d669082d63525c9168efd5';
+  $config[‘fileUpload’] = false; // optional
+
+  $facebook = new Facebook($config);
+?>
+
+<!-- Initialisation SDK JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 'YOUR_APP_ID', // App ID
+      channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    // Additional initialization code here
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+</script>
+
+<!-- Contenu de la page -->
+
 <div class="container">
 
 	<!-- Titre -->
