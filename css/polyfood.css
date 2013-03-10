@@ -18,6 +18,14 @@
 .table td, .table th {
 	background-color: #FFFFFF;
 }
+
+
+input[type="checkbox"] {
+	margin-top: 6px;
+	z-index: 10;
+	display: block;
+}
+
 body {
 	min-height: 100%;
 	position: relative;
@@ -36,10 +44,12 @@ td.clickable:hover, th.clickable:hover {
 	background-color: #eeeeee !important;
 }
 
-#time {
-	background-color: #F0F0F0;
-	border: 1px solid #E0E0E0;
-	border-radius: 5px 5px 5px 5px;
+td.total img, td.friends img {
+	width: 30px;
+	height: 30px;
+}
+
+#facebook {
 	float: right;
 	padding: 5px 10px;
 }

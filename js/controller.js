@@ -40,6 +40,10 @@ Preferences = {
 	},
 };
 
+function firstConnexion() {
+	return (Preferences.getPrice() == Preferences.defaultPrice && Preferences.getPriceType() == Preferences.defaultPriceType && Preferences.getCheckboxes() == Preferences.defaultCheckboxes);
+}
+
 function format() {
 	var i = 0;
 	while(i < json.length) {
@@ -109,7 +113,7 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 		var visible = ((price <= maxPrice || maxPrice == 0) && checkboxIDArray.some(restaurantChecked))
 		
 		if(visible) {
-			html += "<tr>";
+			html += '<tr data-restaurant="'+json[i].restaurant.nom+'" class="dish">';
 				html += "<td class=\"clickable\" onclick=\"window.open('"+json[i].restaurant.lien+"','_newtab');\">";
 					html += "<strong>"+json[i].restaurant.nom+"</strong>";
 				html += "</td>";
@@ -121,6 +125,12 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 				html += "</td>";
 				html += "<td>";
 					html += price;
+				html += "</td>";
+				html += '<td class="friends">';
+					html += "-";
+				html += "</td>";
+				html += '<td class="total">';
+					html += '<img src="https://graph.facebook.com/sacha.bron/picture"> <img src="https://graph.facebook.com/basile.vu1/picture"> <img src="https://graph.facebook.com/kdousse/picture">';
 				html += "</td>";
 			html += "</tr>";
 		}
@@ -137,7 +147,7 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 }
 
 // MAIN
-$(document).ready(function() {
+$(function() {
 	var priceType = Preferences.getPriceType();
 	var price = Preferences.getPrice();
 	var checkboxes = Preferences.getCheckboxes();
@@ -156,7 +166,7 @@ $(document).ready(function() {
 	
 	$('#mainTable th:not(.sorter-false)').tooltip({title:"Shift pour un tri multiple", delay:{show: 500, hide: 100}});
 	$('#mainTable .clickable').tooltip({title:"Plus d'infos sur le restaurant", placement:"left", delay:{show: 500, hide: 100}});
-
+	
 	$(".collapse").collapse()
 	
 	$("#price").submit(function() {
@@ -164,20 +174,32 @@ $(document).ready(function() {
 		$("input[type=checkbox]:checked").each(function(i) {
 			checkboxIDArray.push($("input[type=checkbox]:checked")[i].id);
 		});
-		console.log("2", checkboxIDArray);
 		
 		refreshTable($("#price #select01").val(), $("#price #input01").val(), checkboxIDArray);
 		Preferences.save($("#price #select01").val(), $("#price #input01").val(), checkboxIDArray);
 		return false;
 	});
+	
 	$("input, select").change(function() {
 		checkboxIDArray = [];
 		$("input[type=checkbox]:checked").each(function(i) {
 			checkboxIDArray.push($("input[type=checkbox]:checked")[i].id);
 		});
-		console.log(2, checkboxIDArray);
 		
 		refreshTable($("#price #select01").val(), $("#price #input01").val(), checkboxIDArray);
 		Preferences.save($("#price #select01").val(), $("#price #input01").val(), checkboxIDArray);
 	});
+	
+	if(firstConnexion()) {
+		var html = "";
+		html += '<div class="alert alert-info">Les données sont automatiquement sauvegardées sur votre navigateur.</div>';
+		$("#infos").html(html);
+	}
+	
+	$("#mainTable tr.dish").live('click', function () {
+		console.log("click click")
+		$.get("inomhere.php?place="+$(this).attr("data-restaurant"), function (data) {
+			alert(data)
+		})
+	})
 });
