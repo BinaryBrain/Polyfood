@@ -1,7 +1,7 @@
 <?php
 class DB {
   function __construct() {
-    require(".mysqlpassword");
+    require(".mysqlpassword.php");
     $this->pdo = new PDO('mysql:host=localhost; dbname=polyfood;', "polyfood", $mysqlpassword, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
   }
   

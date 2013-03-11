@@ -6,7 +6,7 @@ $root = "http://localhost:8008";
 require_once("fb/facebook.php");
 
 $config = array();
-require_once(".facebooksecret");
+require_once(".facebooksecret.php");
 $config['fileUpload'] = false; // optional
 
 $facebook = new Facebook($config);
