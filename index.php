@@ -39,8 +39,10 @@ if($isConnected) {
     
     $db = new DB();
     $friendsplaces = $db->getfriendsplaces($friendsids);
-    
     $jsfriendsplaces = json_encode($friendsplaces);
+    
+    $myplace = $db->whereinom($uid);
+    $jsmyplace = $myplace['restaurant'];
   }
   catch(FacebookApiException $e) {
     // If the user is logged out, you can have a 
@@ -82,6 +84,7 @@ if($isConnected) {
     <?php if($isConnected) {
       echo '<script>var isFBConnected=true;</script>';
       echo '<script>var friendsplaces='.$jsfriendsplaces.';</script>';
+      echo '<script>var myplace="'.$jsmyplace.'";</script>';
     } else {
       echo '<script>var isFBConnected=false;</script>';
     }

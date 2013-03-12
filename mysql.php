@@ -18,6 +18,17 @@ class DB {
     }
   }
   
+  function whereinom($fbid) {
+    try {
+      $query = $this->pdo->prepare('SELECT * FROM whereyounom WHERE fbid=:fbid');
+      $query->execute(array(':fbid' => $fbid));
+      return $query->fetch(PDO::FETCH_ASSOC);
+    }
+    catch (PDOException $e) {
+      echo "\nConnection failed: " . $e->getMessage();
+    }
+  }
+  
   function getfriendsplaces($friendsids) {
     try {
       $parameters = array();
@@ -28,7 +39,7 @@ class DB {
         if($i != 0)
           $c .= ', ';
         $c .= ':friendsids'.$i;
-        $parameters[':friendsids'.$i] = $friendsids[$i]; 
+        $parameters[':friendsids'.$i] = $friendsids[$i];
       }
       
       $query = $this->pdo->prepare('SELECT * FROM whereyounom WHERE fbid IN ('.$c.') ORDER BY hour');

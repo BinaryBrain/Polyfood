@@ -114,8 +114,12 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 		
 		if(visible) {
 			var rname = json[i].restaurant.nom
-			if(isFBConnected)
-				html += '<tr data-restaurant="'+rname+'" class="dish connected">'
+			if(isFBConnected) {
+					if(myplace == rname)
+						html += '<tr data-restaurant="'+rname+'" class="dish connected info">'
+					else
+						html += '<tr data-restaurant="'+rname+'" class="dish connected">'
+				}
 			else
 				html += '<tr data-restaurant="'+rname+'" class="dish">'
 				

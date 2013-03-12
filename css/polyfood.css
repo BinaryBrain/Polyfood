@@ -48,10 +48,6 @@ td.total img, td.friends img {
 	height: 30px;
 }
 
-td.friends.nonempty {
-	
-}
-
 #facebook {
 	float: right;
 	background-color: #3b5998;
