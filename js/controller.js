@@ -132,11 +132,20 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 					html += price
 				html += "</td>"
 				if(isFBConnected) {
-					html += '<td class="friends clickable">'
-						for(var i=0, len=friendsplaces.length; i<len; i++) {
-							if(friendsplaces[i].restaurant == rname)
-								html += '<img src="https://graph.facebook.com/'+friendsplaces[i].fbid+'/picture" title="'+friendsplaces[i].fbname+'"> '
+					var empty = true
+					var _html = ''
+					for(var i=0, len=friendsplaces.length; i<len; i++) {
+						if(friendsplaces[i].restaurant == rname) {
+							_html += '<img src="https://graph.facebook.com/'+friendsplaces[i].fbid+'/picture" title="'+friendsplaces[i].fbname+'"> '
+							empty = false
 						}
+					}
+					if(empty)
+						html += '<td class="friends">'
+					else
+						html += '<td class="friends clickable">'
+						
+						html += _html
 					html += "</td>"
 					//html += '<td class="total">'
 					//html += "</td>"
@@ -213,6 +222,27 @@ $(function() {
 			
 			$("#placeModal .restaurant").html(restaurant)
 			$('#placeModal').modal()
+		})
+		
+		$("#mainTable tr.dish td.friends.clickable").live('click', function () {
+			var restaurant = $(this).parent().attr("data-restaurant")
+			
+			html = '<table class="table">'
+			for(var i=0, len=friendsplaces.length; i<len; i++) {
+				if(friendsplaces[i].restaurant == restaurant) {
+					html += '<tr>'
+						html += '<td><img src="https://graph.facebook.com/'+friendsplaces[i].fbid+'/picture" title="'+friendsplaces[i].fbname+'"></td>'
+						html += '<td><a class="facebookname" href="https://facebook.com/'+friendsplaces[i].fbid+'" target="_blank">'+friendsplaces[i].fbname+'</a></td>'
+						html += '<td>'+friendsplaces[i].hour.slice(0, -3)+'</td>'
+					html += '</tr>'
+				}
+			}
+			html += '</table>'
+			
+			$("#friendsModal .restaurant").html(restaurant)
+			$("#friendsModal .modal-body").html(html)
+			
+			$("#friendsModal").modal()
 		})
 		
 		$("#placeModal form").live('submit', function () {

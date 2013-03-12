@@ -19,7 +19,6 @@
 	background-color: #FFFFFF;
 }
 
-
 input[type="checkbox"] {
 	margin-top: 6px;
 	z-index: 10;
@@ -49,6 +48,10 @@ td.total img, td.friends img {
 	height: 30px;
 }
 
+td.friends.nonempty {
+	
+}
+
 #facebook {
 	float: right;
 	background-color: #3b5998;
@@ -71,6 +74,41 @@ td.total img, td.friends img {
 #placeModal form {
 	padding: 0;
 	margin: 0;
+}
+
+#friendsModal img {
+	width: 50px;
+	height: 50px;
+}
+
+#friendsModal table {
+	margin: 0;
+}
+
+#friendsModal .modal-body {
+	
+}
+
+#friendsModal .modal-body {
+	padding: 0;
+}
+
+#friendsModal .facebookname {
+	color: #3b5998;
+	font-weight: bold;
+}
+
+#friendsModal tr td:first-child {
+	padding: 15px;
+	padding-right: 0;
+}
+
+#friendsModal tr:first-child td {
+	border: none;
+}
+
+#friendsModal td {
+	vertical-align: middle;
 }
 
 /*

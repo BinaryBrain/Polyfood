@@ -31,7 +31,7 @@ class DB {
         $parameters[':friendsids'.$i] = $friendsids[$i]; 
       }
       
-      $query = $this->pdo->prepare('SELECT * FROM whereyounom WHERE fbid IN ('.$c.')');
+      $query = $this->pdo->prepare('SELECT * FROM whereyounom WHERE fbid IN ('.$c.') ORDER BY hour');
       $query->execute($parameters);
       return $query->fetchAll(PDO::FETCH_ASSOC);
     }

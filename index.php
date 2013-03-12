@@ -1,8 +1,8 @@
 ﻿<?php session_start();
 require_once("mysql.php");
 
-//$root = "http://localhost:8008";
-$root = "http://polyfood.ch";
+$root = "http://localhost:8008";
+//$root = "http://polyfood.ch";
 
 // FACEBOOK API
 require_once("fb/facebook.php");
@@ -256,7 +256,7 @@ if($isConnected) {
   </div>
   <footer class="footer"><p><a href="http://twitter.com/Binary_Brain">Sacha Bron</a> &amp; <a href="http://twitter.com/Protectator">Kewin Dousse</a> - 2012-2013</p></footer>
   
-  <!-- Modal -->
+  <!-- Place Modal -->
   <div id="placeModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="placeModalLabel" aria-hidden="true">
     <form>
       <div class="modal-header">
@@ -277,10 +277,23 @@ if($isConnected) {
         <br>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Annuler</button>
       </div>
     </form>
+  </div>
+  
+  <!-- Friends Modal -->
+  <div id="friendsModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="friendsModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="friendsModalLabel">Amis à <span class="restaurant"></span></h3>
+    </div>
+    <div class="modal-body">      
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Fermer</button>
+    </div>
   </div>
 </div>
 </body>
