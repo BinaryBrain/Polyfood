@@ -1,6 +1,8 @@
 ﻿<?php session_start();
+require_once("mysql.php");
 
-$root = "http://localhost:8008";
+//$root = "http://localhost:8008";
+$root = "http://polyfood.ch";
 
 // FACEBOOK API
 require_once("fb/facebook.php");
@@ -13,7 +15,7 @@ $facebook = new Facebook($config);
 
 // Login URL
 $params = array(
-  'scope' => 'read_friendlists, publish_stream',
+  'scope' => 'publish_stream',
   'redirect_uri' => $root
 );
 $loginUrl = $facebook->getLoginUrl($params);
@@ -23,7 +25,33 @@ $isConnected = ($uid != 0);
 
 // HARD CODE !!
 if($isConnected) {
+  $friendsids = array();
   
+  try {
+    $user = $facebook->api('/me','GET');
+    
+    $fbquery = str_replace(' ', '+', "SELECT uid, flid FROM friendlist_member WHERE flid IN (SELECT flid FROM friendlist WHERE owner=me())");
+    $res = $facebook->api('/me/friends', 'GET');
+    
+    foreach($res['data'] as $key=>$friend) {
+      $friendsids[$key] = $friend['id'];
+    }
+    
+    $db = new DB();
+    $friendsplaces = $db->getfriendsplaces($friendsids);
+    
+    $jsfriendsplaces = json_encode($friendsplaces);
+  }
+  catch(FacebookApiException $e) {
+    // If the user is logged out, you can have a 
+    // user ID even though the access token is invalid.
+    // In this case, we'll get an exception, so we'll
+    // just ask the user to login again here.
+    $login_url = $facebook->getLoginUrl(); 
+    //echo 'Please <a href="' . $login_url . '">login.</a>';
+    error_log($e->getType());
+    error_log($e->getMessage());
+  }
 }
 ?>
 
@@ -31,7 +59,7 @@ if($isConnected) {
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Poly Food</title>
+    <title>PolyFood</title>
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -50,7 +78,15 @@ if($isConnected) {
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-      
+
+    <?php if($isConnected) {
+      echo '<script>var isFBConnected=true;</script>';
+      echo '<script>var friendsplaces='.$jsfriendsplaces.';</script>';
+    } else {
+      echo '<script>var isFBConnected=false;</script>';
+    }
+    ?>
+    
     <script src="http://static.cpfk.net/scripts/jquery/latest.js"></script>
     <script src="http://static.cpfk.net/scripts/jquery/tablesorter/latest.js"></script>
     <script src="http://static.cpfk.net/scripts/jquery/tooltip/latest.js"></script>
@@ -74,12 +110,10 @@ if($isConnected) {
       <div id="facebook">
 	<?php if(!$isConnected) {
 	  ?>
-	  <p><a href="<?php echo $loginUrl; ?>">Facebook Login</a></p>
-	  <!--fb:login-button size="large" onlogin="Log.info('onlogin callback')">Connexion Facebook</fb:login-button-->
-	  <!--<fb:login-button size="large" onlogin="login()">Connexion Facebook</fb:login-button>-->
+	  <a href="<?php echo $loginUrl; ?>">Facebook Connect</a>
 	  <?php
 	} else {
-	  echo "<p>".$uid."</p>";
+	  echo "<p>Hi, ".$user['first_name']."!</p>";
 	}
       ?>
       </div>
@@ -203,11 +237,16 @@ if($isConnected) {
             Plat</th>
             <th><i class="icon-chevron-up"></i><i class="icon-chevron-down"></i>
             Prix<span id="maxPrice"></span><span id="priceType"></span></th>
-            <th><i class="icon-chevron-up"></i><i class="icon-chevron-down"></i>
-            Friends</th>
-            <th><i class="icon-chevron-up"></i><i class="icon-chevron-down"></i>
-            Total</th>
-          </tr>
+            <?php if($isConnected) {
+	      ?><th><i class="icon-chevron-up"></i><i class="icon-chevron-down"></i>
+	      Friends</th>
+	      <!--
+		<th><i class="icon-chevron-up"></i><i class="icon-chevron-down"></i>
+		Total</th>
+	      -->
+	      <?php
+	    } ?>
+	  </tr>
         </thead>
         <tbody id="data">
         </tbody>

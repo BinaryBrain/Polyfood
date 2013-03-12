@@ -5,7 +5,11 @@ require_once("mysql.php");
 require_once("fb/facebook.php");
 
 $config = array();
+
 require_once(".facebooksecret.php");
+// $config['appId'] = ... ;
+// $config['secret'] = ... ;
+
 $config['fileUpload'] = false; // optional
 
 $facebook = new Facebook($config);
@@ -13,11 +17,13 @@ $facebook = new Facebook($config);
 $uid = $facebook->getUser();
 $isConnected = ($uid != 0);
 
+$user = $facebook->api('/me','GET');
+
 if(isset($_GET['place'])) {
   if($isConnected) {
-    echo "Adding a nom place ".$_GET['place'];
+    echo "Adding a nom place: '".$_GET['place']."'";
     $db = new DB();
-    $db->inomhere($uid, $_GET['place']);
+    $db->inomhere($uid, $user['name'], $_GET['place']);
   }
   else
     echo "Not connected";

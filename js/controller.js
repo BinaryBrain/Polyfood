@@ -113,9 +113,14 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 		var visible = ((price <= maxPrice || maxPrice == 0) && checkboxIDArray.some(restaurantChecked))
 		
 		if(visible) {
-			html += '<tr data-restaurant="'+json[i].restaurant.nom+'" class="dish">';
+			var rname = json[i].restaurant.nom;
+			if(isFBConnected)
+				html += '<tr data-restaurant="'+rname+'" class="dish connected">';
+			else
+				html += '<tr data-restaurant="'+rname+'" class="dish">';
+				
 				html += "<td class=\"clickable\" onclick=\"window.open('"+json[i].restaurant.lien+"','_newtab');\">";
-					html += "<strong>"+json[i].restaurant.nom+"</strong>";
+					html += "<strong>"+rname+"</strong>";
 				html += "</td>";
 				html += "<td>";
 					html += '<img src="img/types/'+json[i].logo+'.png" title="'+json[i].logo+'">';
@@ -126,12 +131,16 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 				html += "<td>";
 					html += price;
 				html += "</td>";
-				html += '<td class="friends">';
-					html += "-";
-				html += "</td>";
-				html += '<td class="total">';
-					html += '<img src="https://graph.facebook.com/sacha.bron/picture"> <img src="https://graph.facebook.com/basile.vu1/picture"> <img src="https://graph.facebook.com/kdousse/picture">';
-				html += "</td>";
+				if(isFBConnected) {
+					html += '<td class="friends">';
+						for(var i=0, len=friendsplaces.length; i<len; i++) {
+							if(friendsplaces[i].restaurant == rname)
+								html += '<img src="https://graph.facebook.com/'+friendsplaces[i].fbid+'/picture" title="'+friendsplaces[i].fbname+'"> '
+						}
+					html += "</td>";
+					//html += '<td class="total">';
+					//html += "</td>";
+				}
 			html += "</tr>";
 		}
 	}
@@ -196,10 +205,11 @@ $(function() {
 		$("#infos").html(html);
 	}
 	
-	$("#mainTable tr.dish").live('click', function () {
-		console.log("click click")
-		$.get("inomhere.php?place="+$(this).attr("data-restaurant"), function (data) {
-			alert(data)
+	if(isFBConnected) {
+		$("#mainTable tr.dish").live('click', function () {
+			$.get("inomhere.php?place="+$(this).attr("data-restaurant"), function (data) {
+				alert(data)
+			})
 		})
-	})
+	}
 });
