@@ -91,6 +91,7 @@ if($isConnected) {
     <script src="http://static.cpfk.net/scripts/jquery/tablesorter/latest.js"></script>
     <script src="http://static.cpfk.net/scripts/jquery/tooltip/latest.js"></script>
     <script src="http://static.cpfk.net/scripts/jquery/collapse/latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script>var json = <?php include("json.php"); ?>;</script>
     <script src="js/controller.js"></script>
     <link href="css/polyfood.css" rel="stylesheet" type="text/css">
@@ -238,22 +239,49 @@ if($isConnected) {
             <th><i class="icon-chevron-up"></i><i class="icon-chevron-down"></i>
             Prix<span id="maxPrice"></span><span id="priceType"></span></th>
             <?php if($isConnected) {
-	      ?><th><i class="icon-chevron-up"></i><i class="icon-chevron-down"></i>
-	      Friends</th>
-	      <!--
-		<th><i class="icon-chevron-up"></i><i class="icon-chevron-down"></i>
-		Total</th>
-	      -->
-	      <?php
-	    } ?>
-	  </tr>
+              ?><th><i class="icon-chevron-up"></i><i class="icon-chevron-down"></i>
+              Friends</th>
+              <!--
+                <th><i class="icon-chevron-up"></i><i class="icon-chevron-down"></i>
+                Total</th>
+              -->
+              <?php
+            } ?>
+          </tr>
         </thead>
         <tbody id="data">
         </tbody>
       </table>
     </div>
   </div>
-  <footer class="footer"><p><a href="http://twitter.com/Binary_Brain">Sacha Bron</a> &amp; <a href="http://twitter.com/Protectator">Kewin Dousse</a> - 2012</p></footer>
+  <footer class="footer"><p><a href="http://twitter.com/Binary_Brain">Sacha Bron</a> &amp; <a href="http://twitter.com/Protectator">Kewin Dousse</a> - 2012-2013</p></footer>
+  
+  <!-- Modal -->
+  <div id="placeModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="placeModalLabel" aria-hidden="true">
+    <form>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="placeModalLabel"><span class="restaurant"></span></h3>
+      </div>
+      <div class="modal-body">
+        <label for="hour">Je mange à </label>
+        <select id="hour" name="hour">
+          <option value="00:00:00">Ne pas préciser</option>
+          <option value="11:30:00">11h30</option>
+          <option value="12:00:00">12h00</option>
+          <option value="12:30:00">12h30</option>
+          <option value="13:00:00">13h00</option>
+          <option value="13:30:00">13h30</option>
+          <option value="14:00:00">14h00</option>
+        </select>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+      </div>
+    </form>
+  </div>
 </div>
 </body>
 </html>

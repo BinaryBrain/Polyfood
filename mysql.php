@@ -8,10 +8,10 @@ class DB {
     $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }
   
-  function inomhere($fbid, $fbname, $restaurant) {
+  function inomhere($fbid, $fbname, $restaurant, $hour) {
     try {
-      $query = $this->pdo->prepare('INSERT INTO whereyounom (fbid, fbname, restaurant) VALUES (:fbid, :fbname, :restaurant) ON DUPLICATE KEY UPDATE fbname=:fbname, restaurant=:restaurant');
-      $query->execute(array(':fbid' => $fbid, ':fbname' => $fbname, ':restaurant' => $restaurant));
+      $query = $this->pdo->prepare('INSERT INTO whereyounom (fbid, fbname, restaurant, hour) VALUES (:fbid, :fbname, :restaurant, :hour) ON DUPLICATE KEY UPDATE fbname=:fbname, restaurant=:restaurant, hour=:hour');
+      $query->execute(array(':fbid' => $fbid, ':fbname' => $fbname, ':restaurant' => $restaurant, ':hour'=>$hour));
     }
     catch (PDOException $e) {
       echo "\nConnection failed: " . $e->getMessage();
