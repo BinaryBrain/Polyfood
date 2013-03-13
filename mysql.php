@@ -50,4 +50,9 @@ class DB {
       echo "\nConnection failed: " . $e->getMessage();
     }
   }
+  
+  function clear() {
+    $query = $this->pdo->prepare('TRUNCATE TABLE `whereyounom`');
+    $query->execute();
+  }
 }

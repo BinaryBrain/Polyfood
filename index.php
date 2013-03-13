@@ -1,8 +1,8 @@
 ﻿<?php session_start();
 require_once("mysql.php");
 
-//$root = "http://localhost:8008";
-$root = "http://polyfood.ch";
+$root = "http://localhost:8008";
+//$root = "http://polyfood.ch";
 
 // FACEBOOK API
 require_once("fb/facebook.php");
