@@ -249,7 +249,10 @@ if($isConnected) {
       </table>
     </div>
   </div>
-  <footer class="footer"><p><a href="http://twitter.com/Binary_Brain">Sacha Bron</a> &amp; <a href="http://twitter.com/Protectator">Kewin Dousse</a> - 2012-2013</p></footer>
+  <footer class="footer">
+    <p class="pull-right">2012-2013</p>
+    <p><a href="http://twitter.com/Binary_Brain">Sacha Bron</a> - <a href="http://twitter.com/Protectator">Kewin Dousse</a> - <a href="http://twitter.com/Flagoul">Basile Vu</a></p>
+  </footer>
   
   <!-- Place Modal -->
   <div id="placeModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="placeModalLabel" aria-hidden="true">
