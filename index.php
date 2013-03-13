@@ -109,6 +109,7 @@ if($isConnected) {
   </div>
   
   <form class="well form-horizontal" id="price" action="./" method="post">
+    <div id="infos"></div>
       <div class="row">
       <!--<div><a href="#"><i class="icon-time"></i> Menu du soir</a></div>-->
       <div id="facebook">
@@ -225,7 +226,6 @@ if($isConnected) {
         </div>
       </fieldset>
     </div>
-    <div id="infos"></div>
   </form>
   <!-- Containter de la page -->
   <div class="row">

@@ -1,5 +1,31 @@
 format()
 
+Version = {
+	version: 3,
+	storageWorks: (typeof(Storage)!=="undefined"),
+	
+	isLastVersion: function (v) {
+		return (v === this.version)
+	},
+	
+	isNewerThan: function (v) {
+		console.log(this.getVersion(), v)
+		return (this.getVersion() < v)
+	},
+	
+	storeVersion: function () {
+		if(this.storageWorks)
+			localStorage.lastVersion = this.version
+	},
+	
+	getVersion: function () {
+		if(this.storageWorks && localStorage.lastVersion !== undefined)
+			return parseInt(localStorage.lastVersion)
+		else
+			return 0
+	},
+}
+
 Preferences = {
 	defaultPriceType: "Etudiant",
 	defaultPrice: 0,
@@ -214,10 +240,17 @@ $(function() {
 		Preferences.save($("#price #select01").val(), $("#price #input01").val(), checkboxIDArray)
 	})
 	
-	if(firstConnexion()) {
+	// Infos
+	if(Version.isNewerThan(1)) {
 		var html = ""
-		html += '<div class="alert alert-info">Les données sont automatiquement sauvegardées sur votre navigateur.</div>'
-		$("#infos").html(html)
+		html += '<div class="alert alert-info"><strong>Info:</strong> Les données du formulaire sont automatiquement sauvegardées sur votre navigateur.</div>'
+		$("#infos").append(html)
+	}
+	
+	if(Version.isNewerThan(2)) {
+		var html = ""
+		html += '<div class="alert alert-info"><strong>Info:</strong> Connectez-vous à Facebook, puis cliquez sur un plat pour indiquer à vos amis où vous allez manger. Une fois connecté, vous pouvez aussi cliquez sur vos amis dans la colonne de droite pour plus de détails.</div>'
+		$("#infos").append(html)
 	}
 	
 	if(isFBConnected) {
@@ -276,4 +309,8 @@ $(function() {
 			return false
 		})
 	}
+	
+	Version.storeVersion()
+
 })
+
