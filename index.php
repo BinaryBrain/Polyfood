@@ -145,86 +145,78 @@ if($isConnected) {
       </fieldset>
     </div>
     <div class="row">
-      <fieldset class="span2">
-        <div class="control-group">
-          <label class="control-label" for="vinci">Le Parmentier / Vinci</label>
-          <div class="controls">
-            <input type="checkbox" id="vinci">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="corbusier">Le Corbusier</label>
-          <div class="controls">
-            <input type="checkbox" id="corbusier">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="puur">Le Puur Innovation</label>
-          <div class="controls">
-            <input type="checkbox" id="puur">
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="span2">
-        <div class="control-group">
-          <label class="control-label" for="hodler">Le Hodler</label>
-          <div class="controls">
-            <input type="checkbox" id="hodler">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="ornithorynque">L'Ornithorynque</label>
-          <div class="controls">
-            <input type="checkbox" id="ornithorynque">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="esplanade">L'Esplanade</label>
-          <div class="controls">
-            <input type="checkbox" id="esplanade">
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="span2">
-        <div class="control-group">
-          <label class="control-label" for="copernic">Le Copernic</label>
-          <div class="controls">
-            <input type="checkbox" id="copernic">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="valloton">La Table de Vallotton</label>
-          <div class="controls">
-            <input type="checkbox" id="valloton">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="hong">Hong Thaï Rung</label>
-          <div class="controls">
-            <input type="checkbox" id="hong">
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="span2">
-        <div class="control-group">
-          <label class="control-label" for="mx">Cafétéria MX</label>
-          <div class="controls">
-            <input type="checkbox" id="mx">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="bc">Cafétéria BC</label>
-          <div class="controls">
-            <input type="checkbox" id="bc">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="maharaja">Maharaja</label>
-          <div class="controls">
-            <input type="checkbox" id="maharaja">
-          </div>
-        </div>
-      </fieldset>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="vinci">Le Parmentier / Vinci</label>
+		  <div class="controls">
+			<input type="checkbox" id="vinci">
+		  </div>
+		</div>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="corbusier">Le Corbusier</label>
+		  <div class="controls">
+			<input type="checkbox" id="corbusier">
+		  </div>
+		</div>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="puur">Le Puur Innovation</label>
+		  <div class="controls">
+			<input type="checkbox" id="puur">
+		  </div>
+		</div>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="hodler">Le Hodler</label>
+		  <div class="controls">
+			<input type="checkbox" id="hodler">
+		  </div>
+		</div>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="ornithorynque">L'Ornithorynque</label>
+		  <div class="controls">
+			<input type="checkbox" id="ornithorynque">
+		  </div>
+		</div>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="esplanade">L'Esplanade</label>
+		  <div class="controls">
+			<input type="checkbox" id="esplanade">
+		  </div>
+		</div>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="copernic">Le Copernic</label>
+		  <div class="controls">
+			<input type="checkbox" id="copernic">
+		  </div>
+		</div>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="valloton">La Table de Vallotton</label>
+		  <div class="controls">
+			<input type="checkbox" id="valloton">
+		  </div>
+		</div>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="hong">Hong Thaï Rung</label>
+		  <div class="controls">
+			<input type="checkbox" id="hong">
+		  </div>
+		</div>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="mx">Cafétéria MX</label>
+		  <div class="controls">
+			<input type="checkbox" id="mx">
+		  </div>
+		</div>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="bc">Cafétéria BC</label>
+		  <div class="controls">
+			<input type="checkbox" id="bc">
+		  </div>
+		</div>
+		<div class="control-group" style="float:left;min-width:150px;">
+		  <label class="control-label" for="maharaja">Maharaja</label>
+		  <div class="controls">
+			<input type="checkbox" id="maharaja">
+		  </div>
+		</div>
     </div>
   </form>
   <!-- Containter de la page -->
