@@ -112,6 +112,22 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 	if(checkboxIDArray.length == 0)
 		checkboxIDArray = checkboxIDArrayAll
 	
+	var colors = new Array();
+	var opacity = 0.5;
+	
+	colors[''] ="#FFFFFF";
+	colors['Cafétéria BC'] = "rgba(255, 0, 0, " + opacity + ")";
+	colors['Cafétéria MX'] = "rgba(0, 38, 255, " + opacity + ")";
+	colors['Copernic'] = "rgba(210, 255, 48, " + opacity + ")";
+	colors['Corbusier'] = "rgba(255, 106, 0, " + opacity + ")";
+	colors['Esplanade'] = "rgba(255, 216, 0, " + opacity + ")";
+	colors['Hodler'] = "rgba(128, 128, 128, " + opacity + ")";
+	colors['Hong Thaï Rung'] = "rgba(0, 148, 255, " + opacity + ")";
+	colors['Maharaja'] = "rgba(255, 106, 0, " + opacity + ")";
+	colors['Ornithorynque'] = "rgba(0, 255, 33, " + opacity + ")";
+	colors['Parmentier<br>Vinci'] = "rgba(127, 51, 0, " + opacity + ")";
+	colors['Puur Innovation'] = "rgba(178, 0, 255, " + opacity + ")";
+	
 	var html = ""
 	console.log(priceType)
 	for(var i in json) {
@@ -149,7 +165,9 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 			else
 				html += '<tr data-restaurant="'+rname+'" class="dish">'
 				
-				html += "<td class=\"restaurant clickable\" onclick=\"window.open('"+json[i].restaurant.lien+"','_newtab')\">"
+				html += "<td class=\"restaurant clickable\" "
+				html += "style=\"border-left: 3px solid; border-left-color: " + colors[rname] + ";\" "
+				html += "onclick=\"window.open('"+json[i].restaurant.lien+"','_newtab')\">"
 					html += "<strong>"+rname+"</strong>"
 				html += "</td>"
 				html += '<td class="logo">'
