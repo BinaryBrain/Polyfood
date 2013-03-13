@@ -21,12 +21,12 @@ $user = $facebook->api('/me','GET');
 
 if(isset($_GET['place']) && isset($_GET['hour'])) {
   if($isConnected) {
-    echo "Adding a nom place: '".$_GET['place']."'";
+    echo "OK: ".$_GET['place'];
     $db = new DB();
     $db->inomhere($uid, $user['name'], $_GET['place'], $_GET['hour']);
   }
   else
-    echo "Not connected";
+    echo "ERROR: Not connected";
 }
 else
-  echo "no nom place";
+  echo "ERROR: No place";

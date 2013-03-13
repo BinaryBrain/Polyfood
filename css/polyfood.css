@@ -43,6 +43,10 @@ td.clickable:hover, th.clickable:hover {
 	background-color: #eeeeee !important;
 }
 
+tr.info td.clickable:hover, tr.info th.clickable:hover {
+	background-color: #c4e3f3 !important;
+}
+
 td.total img, td.friends img {
 	width: 30px;
 	height: 30px;

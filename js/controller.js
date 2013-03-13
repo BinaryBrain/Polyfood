@@ -234,10 +234,14 @@ $(function() {
 			html = '<table class="table">'
 			for(var i=0, len=friendsplaces.length; i<len; i++) {
 				if(friendsplaces[i].restaurant == restaurant) {
+					var hour = friendsplaces[i].hour.slice(0, -3)
+					if(hour === "00:00")
+						hour = "?"
+					
 					html += '<tr>'
 						html += '<td><img src="https://graph.facebook.com/'+friendsplaces[i].fbid+'/picture" title="'+friendsplaces[i].fbname+'"></td>'
 						html += '<td><a class="facebookname" href="https://facebook.com/'+friendsplaces[i].fbid+'" target="_blank">'+friendsplaces[i].fbname+'</a></td>'
-						html += '<td>'+friendsplaces[i].hour.slice(0, -3)+'</td>'
+						html += '<td>'+hour+'</td>'
 					html += '</tr>'
 				}
 			}
@@ -255,6 +259,18 @@ $(function() {
 			
 			$.get("inomhere.php?place="+restaurant+"&hour="+hour, function (data) {
 				$("#placeModal").modal('hide')
+				
+				if(data.slice(0,2) == "OK") {
+					var newRestaurant = data.slice(4)
+					$("#mainTable tr.dish.info").removeClass("info")
+					$("#mainTable tr.dish").each(function () {
+						if($(this).attr("data-restaurant") == newRestaurant) {
+							$(this).addClass("info")
+						}
+					})
+				}
+				else if(data.slice(0,5) == "ERROR")
+					console.log(data)
 			})
 			
 			return false
