@@ -113,9 +113,9 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 		checkboxIDArray = checkboxIDArrayAll
 	
 	var html = ""
-	
+	console.log(priceType)
 	for(var i in json) {
-		if(priceType == "Etudiant")
+		if(priceType == "Etudiant" || priceType == "Étudiant")
 			var price = json[i].prix.E
 		else if(priceType == "Doctorant")
 			var price = json[i].prix.D
