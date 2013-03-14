@@ -231,8 +231,8 @@ $(function() {
 	})
 	
 	$('#mainTable th:not(.sorter-false)').tooltip({title:"Shift pour un tri multiple", delay:{show: 500, hide: 100}})
-	$('#mainTable .clickable.restaurant').tooltip({title:"Plus d'infos sur le restaurant", placement:"left", delay:{show: 500, hide: 100}})
-	$('#mainTable .clickable.friends').tooltip({title:"Détails sur les amis", placement:"right", delay:{show: 500, hide: 100}})
+	$('#mainTable .clickable.restaurant').tooltip({title:"Plus d'infos sur le restaurant", placement:"top", delay:{show: 500, hide: 100}})
+	$('#mainTable .clickable.friends').tooltip({title:"Détails sur les amis", placement:"top", delay:{show: 500, hide: 100}})
 	$('#mainTable .clickable.description').tooltip({title:"Indiquez à mes amis que je mange ici", placement:"top", delay:{show: 500, hide: 100}})
 	
 	$(".collapse").collapse()
