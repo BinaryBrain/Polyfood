@@ -251,7 +251,7 @@ if($isConnected) {
   </div>
   <footer class="footer">
     <p class="pull-right">2012-2013</p>
-    <p><a href="http://twitter.com/Binary_Brain">Sacha Bron</a> - <a href="http://twitter.com/Protectator">Kewin Dousse</a> - <a href="http://twitter.com/Flagoul">Basile Vu</a></p>
+    <p><a href="http://twitter.com/Binary_Brain">Sacha Bron</a> - <a href="http://twitter.com/Protectator">Kewin Dousse</a> - <a href="http://twitter.com/Flag0ul">Basile Vu</a></p>
   </footer>
   
   <!-- Place Modal -->
