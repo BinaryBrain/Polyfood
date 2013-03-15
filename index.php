@@ -266,10 +266,15 @@ if($isConnected) {
         <select id="hour" name="hour">
           <option value="00:00:00">Ne pas préciser</option>
           <option value="11:30:00">11h30</option>
+          <option value="11:45:00">11h45</option>
           <option value="12:00:00">12h00</option>
+          <option value="12:15:00">12h15</option>
           <option value="12:30:00">12h30</option>
+          <option value="12:45:00">12h45</option>
           <option value="13:00:00">13h00</option>
+          <option value="13:15:00">13h15</option>
           <option value="13:30:00">13h30</option>
+          <option value="13:45:00">13h45</option>
           <option value="14:00:00">14h00</option>
         </select>
         <br>
