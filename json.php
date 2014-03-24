@@ -13,11 +13,12 @@ function getCurrentMenu() {
 	$before[2] = '#<div class="resto">(.*)</div>#msU';
 	$before[3] = '#<div class="prix".*>\s*<span.*></span>\s*(.*)\s*<span.*>1/2</span>\s*(.*)\s*</div>#msU';
 	$before[4] = '#<div class="prix".*>\s*<span.*></span>\s*(.*)\s*</div>#msU';
-	$before[5] = '#<div class="prix".*>\s*<span.*>(.*)</span>\s*(.*)\s*<span.*>(.*)</span>\s*(.*)\s*<span.*>(.*)</span>\s*(.*)\s*<span.*>(.*)</span>\s*(.*)\s*</div>#msU';
-	$before[6] = '#<div class="clear">(.*)</div>#msU';
-	$before[7] = '#<li>(.*)</li>#msU';
-	$before[8] = '#<span class="acro" title="(.*)">(.*)</span>\s+(.*)\s+#msU';
-	$before[9] = '#<a href="(.*)".*>(.*)</a>#msU';
+  $before[5] = '#<div class="prix".*>\s*<span.*>(.*)</span>\s*(.*)\s*<span.*>(.*)</span>\s*(.*)\s*<span.*>(.*)</span>\s*(.*)\s*<span.*>(.*)</span>\s*(.*)\s*</div>#msU';
+	$before[6] = '#<div class="prix".*>\s*<span.*>(P)</span>\s*(.*)\s*<span.*>(P+E)</span>\s*(.*)\s*<span.*>(P+E+D)</span>\s*(.*)\s*</div>#msU';
+	$before[7] = '#<div class="clear">(.*)</div>#msU';
+	$before[8] = '#<li>(.*)</li>#msU';
+	$before[9] = '#<span class="acro" title="(.*)">(.*)</span>\s+(.*)\s+#msU';
+	$before[10] = '#<a href="(.*)".*>(.*)</a>#msU';
 	
 	$after = array();
 	$after[0] = "<logo>$1</logo>";
@@ -26,10 +27,11 @@ function getCurrentMenu() {
 	$after[3] = "<prix><E>$2</E><C>$1</C><D>$1</D><V>$1</V></prix>";
 	$after[4] = "<prix><E>$1</E><C>$1</C><D>$1</D><V>$1</V></prix>";
 	$after[5] = "<prix><$1>$2</$1><$3>$4</$3><$5>$6</$5><$7>$8</$7></prix>";
-	$after[6] = "";
-	$after[7] = "<repas>$1</repas>";
-	$after[8] = "<$2>$3</$2>";
-	$after[9] = "<nom>$2</nom>\n<lien>$1</lien>";
+	$after[6] = "<prix><$1>$2</$1><$3>$4</$3><$5>$6</$5></prix>";
+	$after[7] = "";
+	$after[8] = "<repas>$1</repas>";
+	$after[9] = "<$2>$3</$2>";
+	$after[10] = "<nom>$2</nom>\n<lien>$1</lien>";
 		
 	$results = array();
 	
@@ -40,12 +42,15 @@ function getCurrentMenu() {
 		$item = str_replace("'", "&apos;", $item);
 		$item = str_replace("\"", "&quot;", $item);	
 		//var_dump($item[0]);
-
-		$out = simplexml_load_string(utf8_encode($item[0]));
-		$out->description = trim(preg_replace("#\n+\s+#", "\n", $out->description));
-		
-		$results[] = $out;
+    
+    if(isset($item[0])) {
+      $out = simplexml_load_string(utf8_encode($item[0]));
+      $out->description = trim(preg_replace("#\n+\s+#", "\n", $out->description));
+      
+      $results[] = $out;
+    }
 	}
+  
 	return json_encode($results);
 }
 
