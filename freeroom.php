@@ -11,7 +11,7 @@ function getCurrentRooms() {
     );
   }
   else if(!isset($_GET['begin']) || !isset($_GET['day']) || !isset($_GET['end'])) {
-    echo '{error: "Missing parameters. Example: \'?now\' or \'?begin=8&end=9&day=jeudi&filter=CO,CE,CM\'"';
+    echo '{error: "Missing parameters. Example: \'?now\' or \'?begin=8&end=9&day=jeudi&filter=CO,CE,CM\'"}';
     exit;
   }
   else {
