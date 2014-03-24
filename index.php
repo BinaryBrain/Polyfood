@@ -112,7 +112,7 @@ if($isConnected) {
     <div id="infos"></div>
       <div class="row">
       <!--<div><a href="#"><i class="icon-time"></i> Menu du soir</a></div>-->
-      <div id="facebook">
+      <!--<div id="facebook">
 	<?php if(!$isConnected) {
 	  ?>
 	  <a href="<?php echo $loginUrl; ?>">Facebook Connect</a>
@@ -121,7 +121,7 @@ if($isConnected) {
 	  echo "<p>Hi, ".$user['first_name']."!</p>";
 	}
       ?>
-      </div>
+      </div>-->
       <fieldset class="span8">
         <div class="control-group">
           <label class="control-label" for="select01">Je suis</label>
