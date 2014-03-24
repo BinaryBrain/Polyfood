@@ -1,0 +1,675 @@
+1331546424
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu>
+<repas>
+<logo>asiatique</logo>
+<description>
+Boeuf (CH ) au curry vert, lait de coco et pousses de bambou
+Riz parfumé
+</description>
+<restaurant>
+<nom>Hong Thaï Rung</nom>
+<lien>http://restauration.epfl.ch/roulotte-thai</lien>
+</restaurant>
+<prix>
+<E>11.00</E>            
+<D>11.00</D>            
+<C>11.00</C>            
+<V>11.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>asiatique</logo>
+<description>
+Porc (CH) sauté aux légumes et noix de cajou
+Riz parfumé
+</description>
+<restaurant>
+<nom>Hong Thaï Rung</nom>
+<lien>http://restauration.epfl.ch/roulotte-thai</lien>
+</restaurant>
+<prix>
+<E>11.00</E>            
+<D>11.00</D>            
+<C>11.00</C>            
+<V>11.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>asiatique</logo>
+<description>
+Phat siou (nouilles de riz) sautées au poulet (BR)
+</description>
+<restaurant>
+<nom>Hong Thaï Rung</nom>
+<lien>http://restauration.epfl.ch/roulotte-thai</lien>
+</restaurant>
+<prix>
+<E>11.00</E>            
+<D>11.00</D>            
+<C>11.00</C>            
+<V>11.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>pasta</logo>
+<description>
+Tortelli farcis aux Asperges sauce crème
+Salade verte
+</description>
+<restaurant>
+<nom>Le Vinci</nom>
+<lien>http://restauration.epfl.ch/le-Vinci</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.00</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>pasta</logo>
+<description>
+Tortelli farcis aux Asperges sauce crème
+Salade verte
+</description>
+<restaurant>
+<nom>Le Parmentier</nom>
+<lien>http://restauration.epfl.ch/le-Parmentier</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.00</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>pasta</logo>
+<description>
+Ravioli aux petits légums
+Bol de salade
+Entrée : Velouté de carottes au curry
+</description>
+<restaurant>
+<nom>Le Copernic</nom>
+<lien>http://restauration.epfl.ch/le-Copernic</lien>
+</restaurant>
+<prix>
+<E>23.00</E>            
+<D>23.00</D>            
+<C>23.00</C>            
+<V>23.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>pasta</logo>
+<description>
+Pâtes au saumon fumé (NO)
+Salade verte
+</description>
+<restaurant>
+<nom>L'Ornithorynque</nom>
+<lien>http://restauration.epfl.ch/Ornithorynque</lien>
+</restaurant>
+<prix>
+<E>8.50</E>            
+<D>8.50</D>            
+<C>10.00</C>            
+<V>10.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>poisson</logo>
+<description>
+Omelette au saumon fumé à l'aneth
+Petits légumes
+Spaghetti complets
+</description>
+<restaurant>
+<nom>Le Parmentier</nom>
+<lien>http://restauration.epfl.ch/le-Parmentier</lien>
+</restaurant>
+<prix>
+<E>9.00</E>            
+<D>10.00</D>            
+<C>11.00</C>            
+<V>12.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>poisson</logo>
+<description>
+Omelette au saumon fumé à l'aneth
+Petits légumes
+Spaghetti complets
+</description>
+<restaurant>
+<nom>Le Vinci</nom>
+<lien>http://restauration.epfl.ch/le-Vinci</lien>
+</restaurant>
+<prix>
+<E>9.00</E>            
+<D>10.00</D>            
+<C>11.00</C>            
+<V>12.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>poisson</logo>
+<description>
+Brochette de crevettes (Vietnam) à l'aigre douce
+</description>
+<restaurant>
+<nom>L'Ornithorynque</nom>
+<lien>http://restauration.epfl.ch/Ornithorynque</lien>
+</restaurant>
+<prix>
+<E>10.20</E>            
+<D>10.20</D>            
+<C>12.00</C>            
+<V>12.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>vegetarien</logo>
+<description>
+Tomme panée
+Salade ou potage
+</description>
+<restaurant>
+<nom>Le Corbusier</nom>
+<lien>http://restauration.epfl.ch/le-Corbusier</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.50</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>vegetarien</logo>
+<description>
+Tortelli farcis aux Asperges sauce crème
+Salade verte
+</description>
+<restaurant>
+<nom>Le Parmentier</nom>
+<lien>http://restauration.epfl.ch/le-Parmentier</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.50</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>vegetarien</logo>
+<description>
+Tortelli farcis aux Asperges sauce crème
+Salade verte
+</description>
+<restaurant>
+<nom>Le Vinci</nom>
+<lien>http://restauration.epfl.ch/le-Vinci</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.50</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>vegetarien</logo>
+<description>
+Risotto milanaise
+(poivron, tomate,oignon,ail,vin blanc,parmesan)Ch.et Maroc
+Salade mêlée
+</description>
+<restaurant>
+<nom>Cafétéria BC</nom>
+<lien>http://restauration.epfl.ch/cafeteria-BC</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.50</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>vegetarien</logo>
+<description>
+Pâtes sauce ratatouille
+Salade verte
+</description>
+<restaurant>
+<nom>L'Ornithorynque</nom>
+<lien>http://restauration.epfl.ch/Ornithorynque</lien>
+</restaurant>
+<prix>
+<E>7.65</E>            
+<D>7.65</D>            
+<C>9.00</C>            
+<V>9.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>vegetarien</logo>
+<description>
+Samossas
+curry de légumes
+</description>
+<restaurant>
+<nom>La Table de Vallotton</nom>
+<lien>http://restauration.epfl.ch/la-Table-de-Vallotton</lien>
+</restaurant>
+<prix>
+<E>18.00</E>            
+<D>18.00</D>            
+<C>18.00</C>            
+<V>18.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>vegetarien</logo>
+<description>
+Tofu et légumes sautés au gingembre
+Riz parfumé
+</description>
+<restaurant>
+<nom>Hong Thaï Rung</nom>
+<lien>http://restauration.epfl.ch/roulotte-thai</lien>
+</restaurant>
+<prix>
+<E>11.00</E>            
+<D>11.00</D>            
+<C>11.00</C>            
+<V>11.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>vegetarien</logo>
+<description>
+Ricotta et poivrons confits
+Salade verte
+</description>
+<restaurant>
+<nom>L'Ornithorynque</nom>
+<lien>http://restauration.epfl.ch/Ornithorynque</lien>
+</restaurant>
+<prix>
+<E>7.65</E>            
+<D>7.65</D>            
+<C>9.00</C>            
+<V>9.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>viande</logo>
+<description>
+Rôti de porc (CH) à l'estragon
+Carottes Vichy
+Pomme de terre purée
+</description>
+<restaurant>
+<nom>Le Vinci</nom>
+<lien>http://restauration.epfl.ch/le-Vinci</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.00</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>viande</logo>
+<description>
+Rôti de porc (CH) à l'estragon
+Carottes Vichy
+Pomme de terre purée
+</description>
+<restaurant>
+<nom>Le Parmentier</nom>
+<lien>http://restauration.epfl.ch/le-Parmentier</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.00</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>viande</logo>
+<description>
+Pojarski de veau (CH), sauce vin rouge
+Haricots verts ou salade ou potage
+Pâtes
+</description>
+<restaurant>
+<nom>Le Corbusier</nom>
+<lien>http://restauration.epfl.ch/le-Corbusier</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.00</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>viande</logo>
+<description>
+Boulettes de porc à la tomate (CH)
+Aubergines Esp.
+Riz au légumes
+</description>
+<restaurant>
+<nom>Cafétéria BC</nom>
+<lien>http://restauration.epfl.ch/cafeteria-BC</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.00</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>viande</logo>
+<description>
+Ragoût de buf "Stroganoff" (CH)
+Choux de Bruxelles
+Pommes purée
+Salade ou potage
+</description>
+<restaurant>
+<nom>Le Corbusier</nom>
+<lien>http://restauration.epfl.ch/le-Corbusier</lien>
+</restaurant>
+<prix>
+<E>11.00</E>            
+<D>11.00</D>            
+<C>11.00</C>            
+<V>11.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>viande</logo>
+<description>
+Entrecôte de boeuf (CH), steak de cheval (USA)
+Pommes frites
+Buffet de salade
+</description>
+<restaurant>
+<nom>Le Hodler</nom>
+<lien>http://restauration.epfl.ch/le-Hodler</lien>
+</restaurant>
+<prix>
+<E>14.00</E>            
+<D>14.00</D>            
+<C>14.00</C>            
+<V>14.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>viande</logo>
+<description>
+Hamburger (CH), chicken burger
+Pommes frites
+Buffet de salade
+</description>
+<restaurant>
+<nom>Le Hodler</nom>
+<lien>http://restauration.epfl.ch/le-Hodler</lien>
+</restaurant>
+<prix>
+<E>12.00</E>            
+<D>12.00</D>            
+<C>12.00</C>            
+<V>12.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>viande</logo>
+<description>
+Rôti de porc (CH) à l'estragon
+Carottes Vichy
+Pomme de terre purée
+Entrée : Soupe aux légumes
+</description>
+<restaurant>
+<nom>Cafétéria MX</nom>
+<lien>http://restauration.epfl.ch/cafeteria-MX</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.50</C>            
+<V>12.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>viande</logo>
+<description>
+Saucisse de veau (CH) aux oignons
+Côtes de bettes gratiné
+Pommes duchesses
+</description>
+<restaurant>
+<nom>Le Hodler</nom>
+<lien>http://restauration.epfl.ch/le-Hodler</lien>
+</restaurant>
+<prix>
+<E>9.00</E>            
+<D>8.00</D>            
+<C>7.00</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>viande</logo>
+<description>
+Emincé de boeuf (CH) au satay et arachides
+</description>
+<restaurant>
+<nom>L'Ornithorynque</nom>
+<lien>http://restauration.epfl.ch/Ornithorynque</lien>
+</restaurant>
+<prix>
+<E>10.20</E>            
+<D>10.20</D>            
+<C>12.00</C>            
+<V>12.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>viande</logo>
+<description>
+Emincé de boeuf (CH) aux Champignons
+Bouquetière de légumes
+Galettes de roesti
+</description>
+<restaurant>
+<nom>L'Esplanade</nom>
+<lien>http://restauration.epfl.ch/Esplanade</lien>
+</restaurant>
+<prix>
+<E>7.00</E>            
+<D>8.00</D>            
+<C>9.00</C>            
+<V>10.50</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>volaille</logo>
+<description>
+Cuisse de volaille CH à la provençale
+Riz pilaw aux fèves
+Entrée : Velouté de carottes au curry
+</description>
+<restaurant>
+<nom>Le Copernic</nom>
+<lien>http://restauration.epfl.ch/le-Copernic</lien>
+</restaurant>
+<prix>
+<E>23.00</E>            
+<D>23.00</D>            
+<C>23.00</C>            
+<V>23.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>volaille</logo>
+<description>
+Brochette de dinde (CH) aux poivrons sauce au curry jaune
+Jardinière de légumes
+Riz parfumé
+Buffet de salades
+</description>
+<restaurant>
+<nom>L'Atlantide</nom>
+<lien>http://restauration.epfl.ch/Atlantide</lien>
+</restaurant>
+<prix>
+<E>9.50</E>            
+<D>9.50</D>            
+<C>9.50</C>            
+<V>12.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>volaille</logo>
+<description>
+Demi poulet
+Jardinière de légumes
+Pommes de terre sautées
+</description>
+<restaurant>
+<nom>Bistro 31</nom>
+<lien>http://restauration.epfl.ch/Bistro-31</lien>
+</restaurant>
+<prix>
+<E>20.00</E>            
+<D>20.00</D>            
+<C>20.00</C>            
+<V>20.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>volaille</logo>
+<description>
+Grenadins de veau sauce morilles
+Légumes du marché
+Risotto Aquarello
+</description>
+<restaurant>
+<nom>La Table de Vallotton</nom>
+<lien>http://restauration.epfl.ch/la-Table-de-Vallotton</lien>
+</restaurant>
+<prix>
+<E>23.00</E>            
+<D>23.00</D>            
+<C>23.00</C>            
+<V>23.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>volaille</logo>
+<description>
+Ragout de dinde aux pleurottes (CH)
+Aubergines Esp.
+Riz aux légumes
+Salade mêlée
+</description>
+<restaurant>
+<nom>Cafétéria BC</nom>
+<lien>http://restauration.epfl.ch/cafeteria-BC</lien>
+</restaurant>
+<prix>
+<E>12.00</E>            
+<D>12.00</D>            
+<C>12.00</C>            
+<V>12.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>volaille</logo>
+<description>
+Suprême de poulet (FR) pané aux noisettes
+Petits légumes
+Polenta
+</description>
+<restaurant>
+<nom>Le Parmentier</nom>
+<lien>http://restauration.epfl.ch/le-Parmentier</lien>
+</restaurant>
+<prix>
+<E>12.00</E>            
+<D>12.00</D>            
+<C>12.00</C>            
+<V>12.00</V>            
+</prix>
+</repas>
+
+<repas>
+<logo>volaille</logo>
+<description>
+Suprême de poulet (FR) pané aux noisettes
+Petits légumes
+Polenta
+</description>
+<restaurant>
+<nom>Le Vinci</nom>
+<lien>http://restauration.epfl.ch/le-Vinci</lien>
+</restaurant>
+<prix>
+<E>12.00</E>            
+<D>12.00</D>            
+<C>12.00</C>            
+<V>12.00</V>            
+</prix>
+</repas>
+
+
+</menu>

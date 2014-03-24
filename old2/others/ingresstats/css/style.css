@@ -1,0 +1,171 @@
+/*!
+ * Bootstrap v2.2.2
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+@font-face {
+  font-family: coda_regular;
+  src: url('../fonts/coda_regular.ttf');
+}
+
+body {
+	text-shadow: 0px 0px 1px #FFFFFF;
+	text-shadow: 0px 0px 4px #FFFFFF;
+	background-image:url('../img/back2.jpg');
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-attachment:fixed;
+}
+
+.l1 {
+	color: #FECE5A;
+	text-shadow: 0px 0px 1px #FECE5A;
+}
+
+.l2 {
+	color: #FFA630;
+	text-shadow: 0px 0px 1px #FFA630;
+}
+
+.l3 {
+	color: #FF7315;
+	text-shadow: 0px 0px 1px #FF7315;
+}
+
+.l4 {
+	color: #E40000;
+	text-shadow: 0px 0px 1px #E40000;
+}
+
+.l5 {
+	color: #FD2992;
+	text-shadow: 0px 0px 1px #FD2992;
+}
+
+.l6 {
+	color: #EB26CD;
+	text-shadow: 0px 0px 1px #EB26CD;
+}
+
+.l7 {
+	color: #C124E0;
+	text-shadow: 0px 0px 1px #C124E0;
+}
+
+.l8 {
+	color: #9627F4;
+	text-shadow: 0px 0px 1px #9627F4;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+h2 {
+	font-weight: normal;
+	margin-top: 0px;
+}
+
+h3 {
+	font-weight: normal;
+}
+
+h4 {
+	font-weight: normal;
+}
+
+input[type="submit"] {
+	background: #004F4A;
+	color: #59FBEA;
+	border: 2px solid #59FBEA;
+	padding: 0px 1px;
+	text-align:center;
+	border-radius: 0px;
+	margin: 1px;
+}
+
+#validate {
+
+}
+
+input[type="button"].spinButton {
+	background: #004F4A;
+	color: #59FBEA;
+	border: 1px solid #59FBEA;
+	width: 19px;
+	padding: 0px 1px;
+	text-align:center;
+	border-radius: 0px;
+	margin: 0px;
+}
+
+div.container {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 8px;
+}
+
+div.layout {
+	background-color: rgba(13, 30, 33, 0.95);
+	border: 2px solid #00E1EC;
+	padding: 2px 4px;
+}
+
+input::-webkit-input-placeholder {
+    color:    #A9A9A9;
+}
+input:-moz-placeholder {
+    color:    #A9A9A9;
+}
+input:-ms-input-placeholder {
+    color:    #A9A9A9;
+}
+
+tr.portalInfos {
+	padding: 0px;
+}
+
+input.portalInfos {
+	padding: 0px;
+	margin: 0px;
+}
+
+input[type="number"].level{
+	width: 15px;
+  padding: 0px 1px;
+	border-radius: 1px 2px;
+	margin-bottom: 0px;
+	border: solid 1px #59FBEA;
+	color: #ddd;
+	text-align:center;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+ 
+ 
+input[type="number"].itemAcquired{
+	width: 15px;
+  padding: 0px 1px;
+	border-radius: 1px 2px;
+	margin-bottom: 0px;
+	border: solid 1px #59FBEA;
+	color: #ddd;
+	text-align:center;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+
+input[type="number"].itemAcquired::-webkit-inner-spin-button,
+input[type="number"].itemAcquired::-webkit-outer-spin-button{
+	-webkit-appearance: none;
+}
+
+input[type="number"].level::-webkit-inner-spin-button,
+input[type="number"].level::-webkit-outer-spin-button{
+	-webkit-appearance: none;
+}

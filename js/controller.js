@@ -1,5 +1,3 @@
-format()
-
 Version = {
 	version: 3,
 	storageWorks: (typeof(Storage)!=="undefined"),
@@ -73,25 +71,36 @@ function firstConnexion() {
 function format() {
 	var i = 0
 	while(i < json.length) {
-		// Description
-		var lines = json[i].description.split("\n")
-		lines[0] = "<strong>"+lines[0]+"</strong>"
-		json[i].description = lines.join("<br>")
-		
-		// Remove "Le", "La", "Les" "L'"
-		json[i].restaurant.nom = json[i].restaurant.nom.replace(/^L[aes']\s?/i, "")
-
-		// Parmentier - Vinci
-		if(json[i].restaurant.nom == "Parmentier") {
-			json[i].restaurant.nom = "Parmentier<br>Vinci"
-		}
-		else if(json[i].restaurant.nom == "Vinci") {
-			// Remove Vinci
-			json.splice(i, 1)
-			i--
-		}
+        
+        // Remove malformed
+        if(!json[i].restaurant || !json[i].description || !json[i].prix) {
+            json.splice(i, 1)
+            console.log(i)
+            i--
+        }
+        else {
+            // Description
+            var lines = json[i].description.split("\n")
+            lines[0] = "<strong>"+lines[0]+"</strong>"
+            json[i].description = lines.join("<br>")
+            
+            // Remove "Le", "La", "Les" "L'"
+            json[i].restaurant.nom = json[i].restaurant.nom.replace(/^L[aes']\s?/i, "")
+    
+            // Parmentier - Vinci
+            if(json[i].restaurant.nom == "Parmentier") {
+                json[i].restaurant.nom = "Parmentier<br>Vinci"
+            }
+            else if(json[i].restaurant.nom == "Vinci") {
+                // Remove Vinci
+                json.splice(i, 1)
+                i--
+            }
+        }
 		i++
 	}
+    
+    console.log(json)
 }
 
 function refreshForm(priceType, maxPrice, checkboxIDArray) {
@@ -214,6 +223,8 @@ function refreshTable(priceType, maxPrice, checkboxIDArray) {
 
 // MAIN
 $(function() {
+    format()
+    
 	var priceType = Preferences.getPriceType()
 	var price = Preferences.getPrice()
 	var checkboxes = Preferences.getCheckboxes()

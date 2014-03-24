@@ -3,7 +3,6 @@ function getCurrentMenu() {
 	$rss = file_get_contents("http://menus.epfl.ch/cgi-bin/getMenus?&midisoir=midi");
 	
 	$rss = str_replace(array("<em>", "</em>", "<strong>", "</strong>", "<br>", "<br/>", "<br />"), "", $rss);
-    $rss = preg_replace("#<!--.*-->#", "", $rss);
 	preg_match('#<ul id="menulist">.*</ul>#ms', $rss, $ul);
 	preg_match_all('#<li>.+</li>#msU', $ul[0], $li, PREG_SET_ORDER);
 	
@@ -56,7 +55,7 @@ function getMenu() {
 		$content = file($cache, FILE_IGNORE_NEW_LINES);
 		$time  = $content[0];
 		$json = $content[1];
-		if(time()-$time < 60*30) // 30 min de cache
+		if(time()-$time < 60*15) // 2h de cache
 			return $json;
 		else {
 			$menu = getCurrentMenu();
