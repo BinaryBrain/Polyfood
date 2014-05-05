@@ -90,10 +90,9 @@ if($isConnected) {
     }
     ?>
     
-    <script src="http://static.cpfk.net/scripts/jquery/latest.js"></script>
-    <script src="http://static.cpfk.net/scripts/jquery/tablesorter/latest.js"></script>
-    <script src="http://static.cpfk.net/scripts/jquery/tooltip/latest.js"></script>
-    <script src="http://static.cpfk.net/scripts/jquery/collapse/latest.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate.js"></script>
+    <script src="js/tablesorter.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>var json = <?php include("json.php"); ?>;</script>
     <script src="js/controller.js"></script>
